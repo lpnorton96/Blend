@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
-$color-primary: #2c2935;
+$color-primary: #151f2b;
 $color-accent: #efc35e;
 
 @mixin mobile{
@@ -201,6 +201,28 @@ a{
     color: $color-primary;
     text-decoration: none;
 }
+button,
+input,
+textarea {
+    resize: none;
+    border: none;
+    outline: none !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+button {
+    cursor: pointer;
+    margin: 0;
+    width: auto;
+    height: auto;
+}
+
 .container{
     width: 1440px;
     max-width: calc(100% - 120px);
@@ -246,4 +268,32 @@ a{
 }
 .site-header__top-login{
     margin-right: 15px;
+}
+.site-header__navigation{
+    background: $color-primary;
+    color: #fff;
+    padding: 20px 0;
+}
+.site-header__navigation-container {
+    @include flexbox;
+    @include justify-content(space-between);
+    @include align-items(center);
+    ul{
+        list-style: none;
+        @include flexbox;
+        @include align-items(center);
+        a{
+            color: #fff;
+            margin: 0 10px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+    }
+}
+.site-header__search{
+    background: #fff;
+    @include flexbox;
+    @include align-items(center);
+    padding-right: 20px;
+    margin-left: 10px;
 }

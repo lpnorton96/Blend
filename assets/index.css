@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
 @media (min-width: 480px) {
   .mobile-only {
     display: none;
@@ -53,12 +53,12 @@ blockquote,
 dl,
 dd {
   margin: 0;
-  color: #2c2935;
+  color: #151f2b;
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
-  color: #2c2935;
+  color: #151f2b;
   font-size: 12px;
   min-height: 100vh;
   scroll-behavior: smooth;
@@ -67,8 +67,30 @@ body {
 }
 
 a {
-  color: #2c2935;
+  color: #151f2b;
   text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  resize: none;
+  border: none;
+  outline: none !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+button {
+  cursor: pointer;
+  margin: 0;
+  width: auto;
+  height: auto;
 }
 
 .container {
@@ -166,9 +188,68 @@ a {
   display: flex;
 }
 .site-header__top-actions svg path {
-  fill: #2c2935;
+  fill: #151f2b;
 }
 
 .site-header__top-login {
   margin-right: 15px;
+}
+
+.site-header__navigation {
+  background: #151f2b;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.site-header__navigation-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+}
+.site-header__navigation-container ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+}
+.site-header__navigation-container ul a {
+  color: #fff;
+  margin: 0 10px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.site-header__search {
+  background: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  padding-right: 20px;
+  margin-left: 10px;
 }
