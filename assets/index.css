@@ -56,6 +56,14 @@ dd {
   color: #151f2b;
 }
 
+h1, h2 {
+  font-size: 46px;
+}
+
+h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   color: #151f2b;
@@ -230,12 +238,32 @@ button {
   -webkit-align-items: center;
   -moz-align-items: center;
   align-items: center;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.site-header__navigation-container ul li {
+  margin: 5px 10px;
+  text-align: center;
 }
 .site-header__navigation-container ul a {
   color: #fff;
-  margin: 0 10px;
   font-weight: 600;
   font-size: 14px;
+  white-space: nowrap;
+}
+.site-header__navigation-container nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  align-items: flex-start;
 }
 
 .site-header__search {
@@ -252,4 +280,77 @@ button {
   align-items: center;
   padding-right: 20px;
   margin-left: 10px;
+}
+
+.hero {
+  position: relative;
+}
+@media (min-width: 768px) {
+  .hero {
+    max-height: 100vh;
+  }
+}
+.hero .container {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+}
+
+.hero__image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+@media (min-width: 768px) {
+  .hero__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.hero__content {
+  width: 50%;
+  left: 50%;
+  position: relative;
+}
+
+.hero__ctas {
+  margin-top: 20px;
+}
+.hero__ctas .btn:first-child {
+  background: #efc35e;
+  border-color: #efc35e;
+  margin-right: 15px;
+}
+.hero__ctas .btn:last-child {
+  color: #979797;
+}
+
+.banner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.banner__image {
+  margin: 0 15px;
 }

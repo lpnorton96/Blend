@@ -188,6 +188,12 @@ dd {
   margin: 0;
   color: $color-primary;
 }
+h1, h2{
+    font-size: 46px;
+}
+h2, h3, h4, h5, h6{
+    font-weight: 600;
+}
 body{
     font-family: 'Open Sans', sans-serif;
     color: $color-primary;
@@ -282,12 +288,21 @@ button {
         list-style: none;
         @include flexbox;
         @include align-items(center);
+        @include flex-wrap(wrap);
+        li{
+            margin: 5px 10px;
+            text-align: center;
+        }
         a{
             color: #fff;
-            margin: 0 10px;
             font-weight: 600;
             font-size: 14px;
+            white-space: nowrap;
         }
+    }
+    nav{
+        @include flexbox;
+        @include align-items(flex-start);
     }
 }
 .site-header__search{
@@ -296,4 +311,51 @@ button {
     @include align-items(center);
     padding-right: 20px;
     margin-left: 10px;
+}
+.hero{
+    @include above-tablet{
+        max-height: 100vh;
+    }
+    position: relative;
+    .container{
+        height: 100%;
+        @include flexbox;
+        @include align-items(center);
+    }
+}
+.hero__image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    @include above-tablet{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+.hero__content{
+    width: 50%;
+    left:50%;
+    position: relative;
+}
+.hero__ctas{
+    margin-top: 20px;
+    .btn:first-child{
+        background: $color-accent;
+        border-color: $color-accent;
+        margin-right: 15px;
+    }
+    .btn:last-child{
+        color: #979797;
+    }
+}
+.banner{
+    @include flexbox;
+    @include justify-content(center);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.banner__image{
+    margin: 0 15px;
 }
